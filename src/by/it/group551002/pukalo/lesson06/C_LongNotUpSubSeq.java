@@ -63,7 +63,7 @@ public class C_LongNotUpSubSeq {
         Arrays.fill(prev, -1);
         for (int i = 1; i < n; i++) {
             for (int k = 0; k < i; k++) {
-                if (m[i] <= m[k]) {
+                if (m[i] <= m[k] && dp[k] + 1 > dp[i]) {
                     dp[i] = dp[k] + 1;
                     prev[i] = k;
                 }
